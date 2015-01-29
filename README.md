@@ -1,6 +1,6 @@
-A script written for the 2015 [Waterloo iGEM](http://igem.uwaterloo.ca) team when going through our applicants. The script accepts applications downloaded in CSV format where each row corresponds to one applicant. Details on input arguments provided in script header.
+A script written for the 2015 [Waterloo iGEM](http://igem.uwaterloo.ca) team when going through new applicants. The script accepts applications CSV format where each row corresponds to one applicant. Details on input arguments provided in script header.
 
-[Various][1] [studies][2] [of job applications][3]have shown that reviewer of these applications are often subject to implicit racial and gender biases and that obscuring the names of applicants leads to an increase in the diversity of applicants accepted for interviews. This alone is a strong argument for anonymization, but it was also helpful for our team because it removed conflicts of interest caused by knowing some of the applicants personally. 
+[Various][1] [studies][2] [of job applications][3] have shown that obscuring applicant names increases the gender and racial diversity of the applicants accepted for interviews. This alone is a strong argument for anonymization, but it was also helpful for our team because it removed conflicts of interest caused by knowing some of the applicants personally. 
 
 I hope this (very hacky) script is useful either to future iGEM teams or to others looking to anonymize job applications.
 
