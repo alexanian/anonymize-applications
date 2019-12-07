@@ -8,7 +8,7 @@ anonymizeApplications <- function(applications_csv = "./anonymizeApplications.te
 # received the spreadsheet output of a Google Form. The inputs are:
 #
 # applications_csv: CSV file containing rows to be converted into HTML docs
-# name_cols:        Entires in these column #s will be matched with row #s &
+# name_cols:        Entries in these column #s will be matched with row #s &
 #                   output to a doc called names_key.csv with the row #s. You 
 #                   may need to remove multiple columns for anonymization, e.g.
 #                   e-mail addresses as well as names
@@ -98,5 +98,4 @@ for(row in 1:num_applicants) {
   write(html_out, outfile, append=FALSE)
   
 }
-
-}  
+}
