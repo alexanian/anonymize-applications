@@ -16,7 +16,6 @@ def get_credentials(token_path: str = "token.pickle", credentials_path: str = "c
         created automatically when the authorization flow completes for the first time.
     :returns: google.oauth2.credentials.Credentials object.
     """
-    breakpoint()
     creds = None
     # If a token pickle file already exists, read it.
     if os.path.exists(token_path):
