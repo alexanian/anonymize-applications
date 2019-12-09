@@ -6,7 +6,20 @@ from google.auth.transport.requests import Request
 from .config import SCOPES
 
 
-def get_credentials(token_path: str = "token.pickle", credentials_path: str = "credentials.json"):
+class GSpreadCredential:
+    def __init__(self, google_oauth_credentials):
+        self.access_token = google_oauth_credentials.token
+
+
+def get_gspread_credentials(
+    token_path: str = "token.pickle", credentials_path: str = "credentials.json"
+):
+    return GSpreadCredential(get_credentials())
+
+
+def get_credentials(
+    token_path: str = "token.pickle", credentials_path: str = "credentials.json"
+):
     """
     This is taken directly from the Google API quickstart guide, since they presumably know the
     right approach to authenticating.
@@ -19,7 +32,7 @@ def get_credentials(token_path: str = "token.pickle", credentials_path: str = "c
     creds = None
     # If a token pickle file already exists, read it.
     if os.path.exists(token_path):
-        with open(token_path, 'rb') as token:
+        with open(token_path, "rb") as token:
             creds = pickle.load(token)
 
     # If there are no (valid) credentials available, let the user log in.
@@ -30,7 +43,7 @@ def get_credentials(token_path: str = "token.pickle", credentials_path: str = "c
             flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open(token_path, 'wb') as token:
+        with open(token_path, "wb") as token:
             pickle.dump(creds, token)
 
     return creds
